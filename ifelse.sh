@@ -1,5 +1,9 @@
 read a
 read b
-if test $a == $b
-then echo Equal
+if  [[ $a == $b ]] 
+ 
+then echo 'a Equal to b'
+
+else echo "A is less then B" 
+
 fi
