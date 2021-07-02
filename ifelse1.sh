@@ -1,6 +1,10 @@
-read a
+read a 
 read b
-if test $a == $b
+
+
+if (($( echo " $a == $b " | bc -l  )))
 then echo Equal
-else echo Not Equal
+elif (($( echo " $a > $b" | bc -l )))
+then echo Greater
+else echo Smaller
 fi
